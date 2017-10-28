@@ -1,7 +1,71 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sug-PB-yUD">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Musicians Main View Controller-->
+        <scene sceneID="FJJ-T5-nw5">
+            <objects>
+                <viewController id="txj-pd-zxd" customClass="MusiciansMainViewController" customModule="Musicians" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yqh-LA-rDw"/>
+                        <viewControllerLayoutGuide type="bottom" id="uRf-MD-eOl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rGu-57-Gz4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="Txd-rX-Q3V">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" keyboardAppearance="alert" enablesReturnKeyAutomatically="YES"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G4v-qc-xU0">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" red="0.18029104169999999" green="0.18081809579999999" blue="0.16481806339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18029104173183441" green="0.1808180958032608" blue="0.16481806337833405" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Txd-rX-Q3V" firstAttribute="leading" secondItem="rGu-57-Gz4" secondAttribute="leading" id="4TY-uY-PTU"/>
+                            <constraint firstAttribute="trailing" secondItem="Txd-rX-Q3V" secondAttribute="trailing" id="4ci-Eu-XJb"/>
+                            <constraint firstItem="G4v-qc-xU0" firstAttribute="leading" secondItem="rGu-57-Gz4" secondAttribute="leading" id="N4V-0s-cwS"/>
+                            <constraint firstItem="G4v-qc-xU0" firstAttribute="top" secondItem="Txd-rX-Q3V" secondAttribute="bottom" id="elu-cN-cuZ"/>
+                            <constraint firstAttribute="trailing" secondItem="G4v-qc-xU0" secondAttribute="trailing" id="kgm-Wv-2Oq"/>
+                            <constraint firstItem="uRf-MD-eOl" firstAttribute="top" secondItem="G4v-qc-xU0" secondAttribute="bottom" id="l06-L8-8X2"/>
+                            <constraint firstItem="Txd-rX-Q3V" firstAttribute="top" secondItem="Yqh-LA-rDw" secondAttribute="bottom" id="trQ-3A-S2Q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FB5-aN-xO0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YHT-IF-41m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849.375" y="96.126760563380287"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fZk-Le-mQ5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="sug-PB-yUD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="Fqw-eY-CCC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="txj-pd-zxd" kind="relationship" relationship="rootViewController" id="o30-9r-Ac2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4mI-pt-oRa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3.75" y="97.183098591549296"/>
+        </scene>
+    </scenes>
 </document>

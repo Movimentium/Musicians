@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="118" id="KGk-i7-Jjw" customClass="MusiciansTableViewCell" customModule="Musicians" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="118"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="117.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ArtistName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3SI-Gh-h2Q">
+                        <rect key="frame" x="8" y="8" width="304" height="23"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discografía" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXL-DP-7lo">
+                        <rect key="frame" x="8" y="39" width="304" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AlbumName1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rc5-QR-eJc">
+                        <rect key="frame" x="24" y="64" width="269" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZKT-WI-e7w">
+                        <rect key="frame" x="0.0" y="33" width="320" height="1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Pjc-Qv-lmS"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="〉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifo-XP-NAk">
+                        <rect key="frame" x="301" y="47.5" width="11" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="23" id="0fA-N7-5rV"/>
+                            <constraint firstAttribute="width" constant="11" id="o1h-J5-Uln"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AlbumName2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYV-xT-bKa">
+                        <rect key="frame" x="24" y="90" width="288" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.18029104169999999" green="0.18081809579999999" blue="0.16481806339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="Ifo-XP-NAk" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="48w-dh-1FO"/>
+                    <constraint firstAttribute="trailing" secondItem="ZKT-WI-e7w" secondAttribute="trailing" id="AeC-bC-6QI"/>
+                    <constraint firstItem="gYV-xT-bKa" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="BAY-kc-Ifl"/>
+                    <constraint firstItem="gYV-xT-bKa" firstAttribute="top" secondItem="rc5-QR-eJc" secondAttribute="bottom" constant="5.5" id="JGn-rr-zi5"/>
+                    <constraint firstItem="3SI-Gh-h2Q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="NDD-WG-M4n"/>
+                    <constraint firstItem="ZKT-WI-e7w" firstAttribute="top" secondItem="3SI-Gh-h2Q" secondAttribute="bottom" constant="2" id="NYq-eT-EiW"/>
+                    <constraint firstItem="rc5-QR-eJc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="RY3-Fz-vVt"/>
+                    <constraint firstItem="ZKT-WI-e7w" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="W23-fr-b1g"/>
+                    <constraint firstItem="KXL-DP-7lo" firstAttribute="top" secondItem="ZKT-WI-e7w" secondAttribute="bottom" constant="5" id="WPM-yN-Duq"/>
+                    <constraint firstItem="Ifo-XP-NAk" firstAttribute="leading" secondItem="rc5-QR-eJc" secondAttribute="trailing" constant="8" id="cPL-ah-M3h"/>
+                    <constraint firstItem="KXL-DP-7lo" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="gbR-nh-3HL"/>
+                    <constraint firstItem="3SI-Gh-h2Q" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="hW8-4L-YGF"/>
+                    <constraint firstItem="gYV-xT-bKa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="n0c-lF-bdc"/>
+                    <constraint firstItem="KXL-DP-7lo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="onu-UU-ez9"/>
+                    <constraint firstItem="Ifo-XP-NAk" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="soU-Er-TfX"/>
+                    <constraint firstItem="3SI-Gh-h2Q" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="uxB-8s-kcZ"/>
+                    <constraint firstItem="rc5-QR-eJc" firstAttribute="top" secondItem="ZKT-WI-e7w" secondAttribute="bottom" constant="30" id="z0q-oc-fYn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lblAlbum1" destination="rc5-QR-eJc" id="g9h-lb-Dyl"/>
+                <outlet property="lblAlbum2" destination="gYV-xT-bKa" id="w4W-XV-ASR"/>
+                <outlet property="lblArtistName" destination="3SI-Gh-h2Q" id="n0Z-iv-y29"/>
+                <outlet property="lblDiscography" destination="KXL-DP-7lo" id="QET-1j-AGJ"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="91"/>
+        </tableViewCell>
+    </objects>
+</document>
