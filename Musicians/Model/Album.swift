@@ -12,10 +12,10 @@ import Foundation
 class Album {
     
     let name: String
-    let date: Date
+    let date: String
     let artworkUrl60: String
     
-    init(withName name: String, date: Date, artworkUrl60: String) {
+    init(withName name: String, date: String, artworkUrl60: String) {
         self.name = name
         self.date = date
         self.artworkUrl60 = artworkUrl60

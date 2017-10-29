@@ -17,6 +17,7 @@
 		4A66B6141FA4D2C4007370FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A66B6121FA4D2C4007370FA /* LaunchScreen.storyboard */; };
 		4A66B61D1FA4D6AF007370FA /* Musicians.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A66B61B1FA4D6AF007370FA /* Musicians.storyboard */; };
 		4A98D1DC1FA6613B0033B0A8 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A98D1DB1FA6613B0033B0A8 /* DataProvider.swift */; };
+		4A98D1DE1FA677570033B0A8 /* MusiciansTableDSD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A98D1DD1FA677570033B0A8 /* MusiciansTableDSD.swift */; };
 		4AEC60161FA650020088E344 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEC60151FA650020088E344 /* Album.swift */; };
 		4AEC60181FA6524E0088E344 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEC60171FA6524E0088E344 /* Artist.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		4A66B6151FA4D2C4007370FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A66B61C1FA4D6AF007370FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Musicians.storyboard; sourceTree = "<group>"; };
 		4A98D1DB1FA6613B0033B0A8 /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		4A98D1DD1FA677570033B0A8 /* MusiciansTableDSD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusiciansTableDSD.swift; sourceTree = "<group>"; };
 		4AEC60151FA650020088E344 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		4AEC60171FA6524E0088E344 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		52699CD25B2A53D8C3181F10 /* Pods-Musicians.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musicians.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Musicians/Pods-Musicians.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				4A98D1DB1FA6613B0033B0A8 /* DataProvider.swift */,
+				4A98D1DD1FA677570033B0A8 /* MusiciansTableDSD.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -252,10 +255,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Musicians/Pods-Musicians-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -270,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A6162821FA5002D00DB49DD /* AlbumsViewController.swift in Sources */,
+				4A98D1DE1FA677570033B0A8 /* MusiciansTableDSD.swift in Sources */,
 				4A61627F1FA4FAFF00DB49DD /* MusiciansTableViewCell.swift in Sources */,
 				4A61627B1FA4F5E800DB49DD /* MusiciansMainViewController.swift in Sources */,
 				4A98D1DC1FA6613B0033B0A8 /* DataProvider.swift in Sources */,

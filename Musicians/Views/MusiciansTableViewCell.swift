@@ -11,9 +11,16 @@ import UIKit
 class MusiciansTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lblArtistName: UILabel!
+    @IBOutlet weak var lblGenre: UILabel!
     @IBOutlet weak var lblDiscography: UILabel!
     @IBOutlet weak var lblAlbum1: UILabel!
     @IBOutlet weak var lblAlbum2: UILabel!
+    @IBOutlet weak var lblMoreInfo: UILabel!
+    var areMoreAlbums = false {
+        didSet {
+            lblMoreInfo.isHidden = !areMoreAlbums
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
