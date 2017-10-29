@@ -11,6 +11,8 @@ import UIKit
 class AlbumsViewController: UIViewController {
     
     let artist: Artist = DataProvider.singleton.arrArtists[DataProvider.singleton.selectedIndex!]
+    
+    @IBOutlet weak var albumsTable: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

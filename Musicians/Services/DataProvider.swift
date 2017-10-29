@@ -24,7 +24,7 @@ class DataProvider {
     var delegate: DataProviderDelegate?
     private var currentArtistIdx = 0
     private let strURL = "https://itunes.apple.com/search"
-    private var params: Parameters = ["country":"ES", "lang":"es_es", "limit": 10]
+    private var params: Parameters = ["country":"ES", "lang":"es_es", "limit": 20]
     private var arrAlbumsDownloadErrors: [Error] = []
     
     func callWebService(withSearchTerm term: String, isSearchForAlbums: Bool = false) {
@@ -70,6 +70,7 @@ class DataProvider {
             arrArtists.append(Artist(withName: name, genre: genre))
         }
         if arrArtists.isEmpty {
+            delegate?.dataProvider(didFinishOk: true, withError: nil)
             return
         }
         currentArtistIdx = 0
