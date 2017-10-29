@@ -11,10 +11,13 @@
 		4A61627B1FA4F5E800DB49DD /* MusiciansMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A61627A1FA4F5E800DB49DD /* MusiciansMainViewController.swift */; };
 		4A61627F1FA4FAFF00DB49DD /* MusiciansTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A61627D1FA4FAFF00DB49DD /* MusiciansTableViewCell.swift */; };
 		4A6162801FA4FAFF00DB49DD /* MusiciansTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A61627E1FA4FAFF00DB49DD /* MusiciansTableViewCell.xib */; };
+		4A6162821FA5002D00DB49DD /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6162811FA5002D00DB49DD /* AlbumsViewController.swift */; };
 		4A66B60A1FA4D2C4007370FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A66B6091FA4D2C4007370FA /* AppDelegate.swift */; };
 		4A66B6111FA4D2C4007370FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A66B6101FA4D2C4007370FA /* Assets.xcassets */; };
 		4A66B6141FA4D2C4007370FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A66B6121FA4D2C4007370FA /* LaunchScreen.storyboard */; };
 		4A66B61D1FA4D6AF007370FA /* Musicians.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A66B61B1FA4D6AF007370FA /* Musicians.storyboard */; };
+		4AEC60161FA650020088E344 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEC60151FA650020088E344 /* Album.swift */; };
+		4AEC60181FA6524E0088E344 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEC60171FA6524E0088E344 /* Artist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +25,15 @@
 		4A61627A1FA4F5E800DB49DD /* MusiciansMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusiciansMainViewController.swift; sourceTree = "<group>"; };
 		4A61627D1FA4FAFF00DB49DD /* MusiciansTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MusiciansTableViewCell.swift; path = Views/MusiciansTableViewCell.swift; sourceTree = "<group>"; };
 		4A61627E1FA4FAFF00DB49DD /* MusiciansTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MusiciansTableViewCell.xib; path = Views/MusiciansTableViewCell.xib; sourceTree = "<group>"; };
+		4A6162811FA5002D00DB49DD /* AlbumsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		4A66B6061FA4D2C4007370FA /* Musicians.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musicians.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A66B6091FA4D2C4007370FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A66B6101FA4D2C4007370FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A66B6131FA4D2C4007370FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A66B6151FA4D2C4007370FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A66B61C1FA4D6AF007370FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Musicians.storyboard; sourceTree = "<group>"; };
+		4AEC60151FA650020088E344 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		4AEC60171FA6524E0088E344 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		52699CD25B2A53D8C3181F10 /* Pods-Musicians.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musicians.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Musicians/Pods-Musicians.debug.xcconfig"; sourceTree = "<group>"; };
 		5C256D2B6040488D64B00F01 /* Pods-Musicians.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musicians.release.xcconfig"; path = "Pods/Target Support Files/Pods-Musicians/Pods-Musicians.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				4A61627A1FA4F5E800DB49DD /* MusiciansMainViewController.swift */,
+				4A6162811FA5002D00DB49DD /* AlbumsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -61,6 +68,15 @@
 				4A61627E1FA4FAFF00DB49DD /* MusiciansTableViewCell.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		4A6162831FA5004200DB49DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4AEC60151FA650020088E344 /* Album.swift */,
+				4AEC60171FA6524E0088E344 /* Artist.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		4A66B5FD1FA4D2C4007370FA = {
@@ -85,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				4A66B6091FA4D2C4007370FA /* AppDelegate.swift */,
+				4A6162831FA5004200DB49DD /* Model */,
 				4A6162791FA4F5E800DB49DD /* Controllers */,
 				4A61627C1FA4F60300DB49DD /* Views */,
 				4A66B6101FA4D2C4007370FA /* Assets.xcassets */,
@@ -241,9 +258,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A6162821FA5002D00DB49DD /* AlbumsViewController.swift in Sources */,
 				4A61627F1FA4FAFF00DB49DD /* MusiciansTableViewCell.swift in Sources */,
 				4A61627B1FA4F5E800DB49DD /* MusiciansMainViewController.swift in Sources */,
 				4A66B60A1FA4D2C4007370FA /* AppDelegate.swift in Sources */,
+				4AEC60161FA650020088E344 /* Album.swift in Sources */,
+				4AEC60181FA6524E0088E344 /* Artist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
