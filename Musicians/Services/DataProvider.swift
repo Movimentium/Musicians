@@ -19,12 +19,12 @@ class DataProvider {
     static let singleton = DataProvider()
     private init() {}
     
-    
+    var selectedIndex: Int?
     var arrArtists: [Artist] = []
     var delegate: DataProviderDelegate?
     private var currentArtistIdx = 0
     private let strURL = "https://itunes.apple.com/search"
-    private var params: Parameters = ["country":"ES", "lang":"es_es", "limit": 30]
+    private var params: Parameters = ["country":"ES", "lang":"es_es", "limit": 10]
     private var arrAlbumsDownloadErrors: [Error] = []
     
     func callWebService(withSearchTerm term: String, isSearchForAlbums: Bool = false) {
@@ -68,6 +68,9 @@ class DataProvider {
             let name = result["artistName"].stringValue
             let genre = result["primaryGenreName"].stringValue
             arrArtists.append(Artist(withName: name, genre: genre))
+        }
+        if arrArtists.isEmpty {
+            return
         }
         currentArtistIdx = 0
         let name = arrArtists[currentArtistIdx].name

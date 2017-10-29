@@ -21,10 +21,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="Txd-rX-Q3V">
+                            <searchBar contentMode="redraw" barStyle="black" placeholder="Introduzca un término de búsqueda" translatesAutoresizingMaskIntoConstraints="NO" id="Txd-rX-Q3V">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" keyboardAppearance="alert"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G4v-qc-xU0">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
@@ -45,6 +49,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="FB5-aN-xO0"/>
                     <connections>
+                        <outlet property="musiciansTable" destination="G4v-qc-xU0" id="G9h-AI-ddc"/>
+                        <outlet property="searchBar" destination="Txd-rX-Q3V" id="xve-yL-5an"/>
                         <segue destination="L07-pU-4dp" kind="show" identifier="showDetail" id="43z-cE-5wZ"/>
                     </connections>
                 </viewController>

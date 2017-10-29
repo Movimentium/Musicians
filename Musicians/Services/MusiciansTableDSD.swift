@@ -36,7 +36,7 @@ class MusiciansTableDSD: NSObject, UITableViewDataSource, UITableViewDelegate {
         cell.lblGenre.text = artist.genre
         let numOfAlbums = artist.arrAlbums.count
         cell.lblAlbum1.text = (numOfAlbums >= 1 ? artist.arrAlbums[0].name : "")
-        cell.lblAlbum2.text = (numOfAlbums >= 2 ? artist.arrAlbums[0].name : "")
+        cell.lblAlbum2.text = (numOfAlbums >= 2 ? artist.arrAlbums[1].name : "")
         cell.areMoreAlbums = numOfAlbums > 2
         return cell
     }

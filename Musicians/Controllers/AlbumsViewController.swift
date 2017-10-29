@@ -9,11 +9,13 @@
 import UIKit
 
 class AlbumsViewController: UIViewController {
+    
+    let artist: Artist = DataProvider.singleton.arrArtists[DataProvider.singleton.selectedIndex!]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        title = artist.name
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
 }
