@@ -8,10 +8,12 @@
 
 import Foundation
 import Alamofire
+import AlamofireImage
 import SwiftyJSON
 
 protocol DataProviderDelegate {
     func dataProvider(didFinishOk: Bool, withError error: Error?);
+    func dataProvider(didFinishDownloadAlbumsImages: Bool, withError error: Error?);
 }
 
 class DataProvider {
@@ -86,6 +88,27 @@ class DataProvider {
             let artworkUrl60 = result["artworkUrl60"].stringValue
             let album = Album(withName: name, date: date, artworkUrl60: artworkUrl60)
             arrArtists[currentArtistIdx].arrAlbums.append(album)
+        }
+    }
+    
+    func downloadAlbumImages() {
+        guard let idx = selectedIndex else {
+            return
+        }
+        let artist = arrArtists[idx]
+        var numOfImagesToDownload = artist.arrAlbums.count
+        for album in artist.arrAlbums {
+            Alamofire.request(album.artworkUrl60).responseImage
+                { [weak self] response in
+                guard let wSelf = self else { fatalError("self == nil") }
+                if let image = response.result.value {
+                    album.img = image
+                }
+                numOfImagesToDownload -= 1
+                if numOfImagesToDownload == 0 {
+                    wSelf.delegate?.dataProvider(didFinishDownloadAlbumsImages: true, withError: nil)
+                }
+            }
         }
     }
 }

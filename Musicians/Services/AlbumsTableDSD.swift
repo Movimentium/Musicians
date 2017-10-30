@@ -30,7 +30,7 @@ class AlbumsTableDSD: NSObject, UITableViewDataSource, UITableViewDelegate {
         let album = artist.arrAlbums[indexPath.row]
         cell.lblName.text = album.name
         cell.lblYear.text = album.date
-        //cell.lblGenre.text = artist.genre
+        cell.imageView?.image = album.img
         return cell
     }
     

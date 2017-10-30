@@ -6,7 +6,7 @@
 //  Copyright © 2017 Miguel Galllego. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
 class Album {
@@ -14,6 +14,7 @@ class Album {
     let name: String
     let date: String
     let artworkUrl60: String
+    var img: UIImage? 
     
     init(withName name: String, date: String, artworkUrl60: String) {
         self.name = name

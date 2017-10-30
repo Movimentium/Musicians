@@ -48,6 +48,11 @@ class MusiciansMainViewController: UIViewController, DataProviderDelegate, Music
             musiciansTable.reloadData()
         }
     }
+    
+    func dataProvider(didFinishDownloadAlbumsImages: Bool, withError error: Error?) {
+        waitVC.dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "showDetail", sender: nil)
+    }
 
     
     func musiciansTableDidSelectRow(atIndex idx: Int) {
@@ -56,7 +61,8 @@ class MusiciansMainViewController: UIViewController, DataProviderDelegate, Music
             return
         }
         dataProv.selectedIndex = idx
-        performSegue(withIdentifier: "showDetail", sender: nil)
+        present(waitVC, animated: true, completion: nil)
+        dataProv.downloadAlbumImages()
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
