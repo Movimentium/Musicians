@@ -50,10 +50,10 @@ class MusiciansMainViewController: UIViewController, DataProviderDelegate, Music
     }
     
     func dataProvider(didFinishDownloadAlbumsImages: Bool, withError error: Error?) {
-        waitVC.dismiss(animated: true, completion: nil)
-        performSegue(withIdentifier: "showDetail", sender: nil)
+        waitVC.dismiss(animated: true) { 
+            self.performSegue(withIdentifier: "showDetail", sender: nil)
+        }
     }
-
     
     func musiciansTableDidSelectRow(atIndex idx: Int) {
         musiciansTable.deselectRow(at: IndexPath(row: idx, section: 0), animated: false)

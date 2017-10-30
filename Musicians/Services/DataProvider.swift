@@ -85,8 +85,10 @@ class DataProvider {
         for result in arrResults {
             let name = result["collectionName"].stringValue
             let date = result["releaseDate"].stringValue
-            let artworkUrl60 = result["artworkUrl60"].stringValue
-            let album = Album(withName: name, date: date, artworkUrl60: artworkUrl60)
+            let idx = date.index(date.startIndex, offsetBy: 4)
+            let dateShort = date.substring(to: idx)
+            let artworkUrl = result["artworkUrl100"].stringValue
+            let album = Album(withName: name, date: dateShort, artworkUrl: artworkUrl)
             arrArtists[currentArtistIdx].arrAlbums.append(album)
         }
     }
@@ -98,7 +100,7 @@ class DataProvider {
         let artist = arrArtists[idx]
         var numOfImagesToDownload = artist.arrAlbums.count
         for album in artist.arrAlbums {
-            Alamofire.request(album.artworkUrl60).responseImage
+            Alamofire.request(album.artworkUrl).responseImage
                 { [weak self] response in
                 guard let wSelf = self else { fatalError("self == nil") }
                 if let image = response.result.value {

@@ -13,12 +13,12 @@ class Album {
     
     let name: String
     let date: String
-    let artworkUrl60: String
+    let artworkUrl: String
     var img: UIImage? 
     
-    init(withName name: String, date: String, artworkUrl60: String) {
+    init(withName name: String, date: String, artworkUrl: String) {
         self.name = name
         self.date = date
-        self.artworkUrl60 = artworkUrl60
+        self.artworkUrl = artworkUrl
     }
 }
