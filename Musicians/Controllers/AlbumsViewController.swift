@@ -10,14 +10,16 @@ import UIKit
 
 class AlbumsViewController: UIViewController {
     
-    let artist: Artist = DataProvider.singleton.arrArtists[DataProvider.singleton.selectedIndex!]
-    
     @IBOutlet weak var albumsTable: UITableView!
+    let artist: Artist = DataProvider.singleton.arrArtists[DataProvider.singleton.selectedIndex!]
+    let albumsTableDSD = AlbumsTableDSD()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = artist.name
         navigationController?.setNavigationBarHidden(false, animated: true)
+        albumsTable.dataSource = albumsTableDSD
+        albumsTable.delegate = albumsTableDSD
     }
 
 }
